@@ -5,21 +5,21 @@
 class Risor < Formula
   desc "An embedded scripting language for Go projects"
   homepage "https://github.com/risor-io/risor"
-  version "0.5.0"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/risor-io/risor/releases/download/v0.5.0/risor_Darwin_arm64.tar.gz"
-      sha256 "c86b2f8afea1f56eb56d0c1ba31a27a6c0a13e35774ca332d57101331ba5c610"
+      url "https://github.com/risor-io/risor/releases/download/v0.6.0/risor_Darwin_arm64.tar.gz"
+      sha256 "d1113f498b3ef9a46b1405e3fb18dd012b20f64a13db0ef886c52c01f54fd89b"
 
       def install
         bin.install "risor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/risor-io/risor/releases/download/v0.5.0/risor_Darwin_x86_64.tar.gz"
-      sha256 "68c9b38d84d521acf78faa556dc1d8611ca4c4412bcf91ad17878489dd5bbd3d"
+      url "https://github.com/risor-io/risor/releases/download/v0.6.0/risor_Darwin_x86_64.tar.gz"
+      sha256 "91d932968885c100439c7da7664dd02abbc8429013e0bed7ad50b6c5b96c6df5"
 
       def install
         bin.install "risor"
@@ -29,16 +29,16 @@ class Risor < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/risor-io/risor/releases/download/v0.5.0/risor_Linux_arm64.tar.gz"
-      sha256 "71bcd5a360466c512b39982c4f103a835f3b5ab2cb38d4ed44af949d9b3a883b"
+      url "https://github.com/risor-io/risor/releases/download/v0.6.0/risor_Linux_arm64.tar.gz"
+      sha256 "921d5536838f96b42280befd7471fa9984beb1dda5cd104a847f7127bde39226"
 
       def install
         bin.install "risor"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/risor-io/risor/releases/download/v0.5.0/risor_Linux_x86_64.tar.gz"
-      sha256 "3aa6e62980967cb012f00bf9ae20a4c2d791e46873071acd637ee8ee7eb87bc4"
+      url "https://github.com/risor-io/risor/releases/download/v0.6.0/risor_Linux_x86_64.tar.gz"
+      sha256 "b2e14bedc0c28150edd17f5c05a726b804bc027231cf97684e8cc5e7800784cb"
 
       def install
         bin.install "risor"
