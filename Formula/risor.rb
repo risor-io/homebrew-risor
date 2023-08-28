@@ -5,21 +5,21 @@
 class Risor < Formula
   desc "An embedded scripting language for Go projects"
   homepage "https://github.com/risor-io/risor"
-  version "0.15.0"
+  version "0.17.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/risor-io/risor/releases/download/v0.15.0/risor_Darwin_x86_64.tar.gz"
-      sha256 "6447a19d58c2b7ea1dabb9512c5e8d7aa7c8c72ff2fa67ac73338f0632503ffa"
+      url "https://github.com/risor-io/risor/releases/download/v0.17.0/risor_Darwin_x86_64.tar.gz"
+      sha256 "a1e559924e8d3fd9b851969d9ccbcadcee66b875300875551578e41f2567be9e"
 
       def install
         bin.install "risor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/risor-io/risor/releases/download/v0.15.0/risor_Darwin_arm64.tar.gz"
-      sha256 "f5ed75308ecadf2544b16863eaa0913f6384507714f1d9645966a4e2db66908f"
+      url "https://github.com/risor-io/risor/releases/download/v0.17.0/risor_Darwin_arm64.tar.gz"
+      sha256 "4391fa6ad9412fbff08693be5f5cb31be29607e318a443b44a58deec5a034246"
 
       def install
         bin.install "risor"
@@ -28,17 +28,17 @@ class Risor < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/risor-io/risor/releases/download/v0.15.0/risor_Linux_x86_64.tar.gz"
-      sha256 "b07b6e53eae9c85271382b6d9ce3b5debc5572ec6bc8f0ba82e32b290d1cfe55"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/risor-io/risor/releases/download/v0.17.0/risor_Linux_arm64.tar.gz"
+      sha256 "8f33aff98ac24560e1bf01164f4036fbe3f075bbcc8f8e9cd2415b466a83b5c4"
 
       def install
         bin.install "risor"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/risor-io/risor/releases/download/v0.15.0/risor_Linux_arm64.tar.gz"
-      sha256 "96203c14a8031b82d7d9adda56e9c3e400b9cf06753c8c3dc9a90d0cebe27743"
+    if Hardware::CPU.intel?
+      url "https://github.com/risor-io/risor/releases/download/v0.17.0/risor_Linux_x86_64.tar.gz"
+      sha256 "f835efe489d721d10273ffc07dd3eb9ce9b76f5033e830bbdd6d8ac4e1188421"
 
       def install
         bin.install "risor"
