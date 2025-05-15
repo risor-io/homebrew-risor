@@ -11,7 +11,7 @@ class Risor < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/risor-io/risor/releases/download/v1.8.0/risor_Darwin_x86_64.tar.gz"
-      sha256 "dfa943c719ff4123b3302d14f85e74d9ac142be51a2642fafea95859d2ded6d8"
+      sha256 "1cd56feb11f074b8eed10135c0edb743e657237799715d62ddf7522c3eba59c3"
 
       def install
         bin.install "risor"
@@ -19,7 +19,7 @@ class Risor < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/risor-io/risor/releases/download/v1.8.0/risor_Darwin_arm64.tar.gz"
-      sha256 "16c8d42c6c5bb7aa070f530b2872d1a90f65f70081080e851ef9528631835c9f"
+      sha256 "fbc82f5bf0799cadf0aa89b7c58affd09266eff101317773b0f0b3783fa391d3"
 
       def install
         bin.install "risor"
@@ -31,7 +31,7 @@ class Risor < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/risor-io/risor/releases/download/v1.8.0/risor_Linux_x86_64.tar.gz"
-        sha256 "5833aa82abc1935443c6c58724a35f97ea539ed60948a7b63a86400fd998ee25"
+        sha256 "ca4c8519e18a9f4ceb639da5a2cd3d655b411addfb532a02ff2a63e65311aa77"
 
         def install
           bin.install "risor"
@@ -41,7 +41,7 @@ class Risor < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/risor-io/risor/releases/download/v1.8.0/risor_Linux_arm64.tar.gz"
-        sha256 "797d865ae32cb8c180b53cf4984f4452796a6b62fc0462ea9124a7963341fd81"
+        sha256 "c653ce009d3d780dace3c7d574103242a192a12338b1b967145ed90d2956d8b2"
 
         def install
           bin.install "risor"
